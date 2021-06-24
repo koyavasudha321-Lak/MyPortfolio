@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<head>
+        
+    <link rel="stylesheet" href="../CSS_c/styles.css">
+
+
+    <!-- adding boortstrap links -->
+    <link rel="stylesheet" href="file:///C:/Users/91966/Downloads/fontawesome-free-5.15.3-web/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet"  href="../bootstrap/css/mdb.css">
+    <link rel="stylesheet"  href="../bootstrap/css/style.css">
+
+    <!-- social media-->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+    <link rel="stylesheet" href="../bootstrap/css/fontawesome.css">
+
+        
+    <title>Login Form </title>  
+    
+</head>
+    <body>
+        <img src="../images/bg2.jpg" class="imageC">
+        <div class="loginPage"> 
+            <img src="../images/avi7.jpg" class="avatar">
+            <div class="form">
+                
+                <form class="register-form" action="Home.html" method="POST">
+                    <h1 >Register</h1>
+                    
+                    <input type="text" id="email" placeholder="Email address">
+                    <span><i class="fa fa-envelope"  ></i></span>
+                    <span class="va">
+                        <i class="fa fa-check-circle" id="success" ></i>
+                        <i class="fa fa-times-circle " id="error" ></i>
+                        <i class="fa fa-exclamation-circle " id="warning" ></i>
+                    </span>
+
+                    
+                    <input type="password" onkeyup="trigger()" placeholder="Password" id="myInput1" >
+                    
+                    <span onclick="myFun1()" >
+                        <i class="fa fa-eye" id="hide11"  ></i>
+                        <i class="fa fa-eye-slash" id="hide12" ></i>
+                    </span>
+
+
+                    &nbsp;
+
+                    <div class="indicator">
+                       <span class="weak"></span>
+                       <span class="medium"></span>
+                       <span class="strong"></span>
+                    </div>
+                    <div class="txt">Ur Pass is too weak</div>
+
+                    
+                    
+
+                    
+
+                    <input type="password" placeholder="Retype Password" id="myInput2">
+                    <span onclick="myFun2()">
+                        <i class="fa fa-eye" id="hide21" ></i>
+                        <i class="fa fa-eye-slash" id="hide22"  ></i>
+                    </span>
+
+                 
+                    <input type="submit" value="Create" onClick="return validate()">
+                    <a href="#">Lost your Password??</a>
+                    <p class="msg">Already Registered!! <a href="#">Login</a> </p>
+                    
+                </form>
+            
+            
+                <form class="login-form">
+                    <h1>Login</h1>
+                    <br>
+                    
+                    <input type="text" id="email"  placeholder="Email address"><span><i class="fa fa-envelope" ></i></span>
+                   
+                      
+                    
+                    <br>
+                    
+                    <input type="password"   placeholder="Password" id="myInput" >
+                    
+                    <span onclick="myFun()">
+                        <i class="fa fa-eye" id="hide01"  ></i>
+                        <i class="fa fa-eye-slash" id="hide02"  ></i>
+                    </span>
+
+                    
+                    <br>
+                    <br>
+                    
+                    <input type="submit" value="Login">
+
+                    <p class="msg">Not Registered yet!! <a href="#">Register</a> </p>
+                    <a href="index.html">Login Completed</a>
+                    
+                </form>
+
+                
+            </div>
+        </div>
+
+
+        <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+       
+        <script>
+            $('.msg a').click(function(){
+                $('form').animate({height:"toggle",opacity:"toggle"},"slow");
+            });
+
+            $(document).ready(function(){
+                $('#email').focusout(function(){
+                    email_validate();
+                });
+
+            });
+
+
+
+            /* password validation */
+
+const indicator = document.querySelector(".indicator");
+const input = document.querySelector("input");
+const weak = document.querySelector(".weak");
+const medium = document.querySelector(".medium");
+const strong = document.querySelector(".strong");
+const text = document.querySelector(".txt");
+
+let regExpWeak = /[a-z]/;
+let regExpMedium = /\d+/;
+let regExpStrong = /.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/;
+
+
+function trigger() {
+    if(input.value != ""){
+        indicator.style.display = "block";
+        
+
+    }
+}
+
+
+        </script>
+
+         <script src="../bootstrap/js/myscript.js"></script>
+
+    
+    </body>
+
+</html>
