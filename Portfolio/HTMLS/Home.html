@@ -39,56 +39,54 @@
                     </span>
 
                     
-                    <input type="password" onkeyup="trigger()" placeholder="Password" id="myInput1" >
+                    <input type="password"  placeholder="Password" id="myInput1" oninput="passFun()" >
                     
                     <span onclick="myFun1()" >
                         <i class="fa fa-eye" id="hide11"  ></i>
                         <i class="fa fa-eye-slash" id="hide12" ></i>
                     </span>
-
-
-                    &nbsp;
-
-                    <div class="indicator">
-                       <span class="weak"></span>
-                       <span class="medium"></span>
-                       <span class="strong"></span>
-                    </div>
-                    <div class="txt">Ur Pass is too weak</div>
-
-                    
-                    
-
-                    
-
-                    <input type="password" placeholder="Retype Password" id="myInput2">
+                    <p id="txt"></p>                   
+                       
+                
+                    <input type="password" placeholder="Retype Password" id="myInput2" oninput="checkPass()">
                     <span onclick="myFun2()">
                         <i class="fa fa-eye" id="hide21" ></i>
                         <i class="fa fa-eye-slash" id="hide22"  ></i>
                     </span>
+                    <label></label>
+                    <p id="txt1"></p> 
+                    <span>
+                        <i class="fas fa-exclamation-triangle" id="hide8"  ></i>
+                        <i class="fa fa-thumbs-up" id="hide9" ></i>
+                 
+                    </span>
+                    
 
                  
-                    <input type="submit" value="Create" onClick="return validate()">
-                    <a href="#">Lost your Password??</a>
+                    <input type="submit" value="Register" >
+                    <a href="#"></a>
                     <p class="msg">Already Registered!! <a href="#">Login</a> </p>
                     
                 </form>
             
             
-                <form class="login-form">
+                <form class="login-form" onsubmit="login_form_validate()">
                     <h1>Login</h1>
                     <br>
                     
-                    <input type="text" id="email"  placeholder="Email address"><span><i class="fa fa-envelope" ></i></span>
+                    <input type="text" id="em_er" placeholder="Email address">
+                    <span><i class="fa fa-envelope" ></i></span>
                    
                       
                     
                     <br>
                     
-                    <input type="password"   placeholder="Password" id="myInput" >
+                    <input type="password" placeholder="Password" id="myInput" >
                     
+                   
+
                     <span onclick="myFun()">
-                        <i class="fa fa-eye" id="hide01"  ></i>
+                        <i class="fa fa-eye" id="hide01" ></i>
                         <i class="fa fa-eye-slash" id="hide02"  ></i>
                     </span>
 
@@ -96,10 +94,10 @@
                     <br>
                     <br>
                     
-                    <input type="submit" value="Login">
+                    <input type="submit" value="Login" >
 
                     <p class="msg">Not Registered yet!! <a href="#">Register</a> </p>
-                    <a href="index.html">Login Completed</a>
+                    <a href="#">Forgot Password?</a>
                     
                 </form>
 
@@ -126,30 +124,15 @@
 
             /* password validation */
 
-const indicator = document.querySelector(".indicator");
-const input = document.querySelector("input");
-const weak = document.querySelector(".weak");
-const medium = document.querySelector(".medium");
-const strong = document.querySelector(".strong");
-const text = document.querySelector(".txt");
+            
+            
 
-let regExpWeak = /[a-z]/;
-let regExpMedium = /\d+/;
-let regExpStrong = /.[!,@,#,$,%,^,&,*,?,_,~,-,(,)]/;
-
-
-function trigger() {
-    if(input.value != ""){
-        indicator.style.display = "block";
-        
-
-    }
-}
 
 
         </script>
 
          <script src="../bootstrap/js/myscript.js"></script>
+         
 
     
     </body>

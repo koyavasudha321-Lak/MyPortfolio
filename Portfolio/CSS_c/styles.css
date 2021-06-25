@@ -156,64 +156,49 @@ h1{
     color: red;
     display: none;
 }
+#hide8{
+    color: crimson;
+    transform: translateY(-20px);
+    display: none;
+}
+#hide9{
+    transform: translateY(-20px);
+    color: green;
+    display: none;
+}
 #warning{
     color: orange;
     display: none;
 }
-.weak.active{
-    background-color: #ff4757 !important;
-
-    left: -210px;
-    top: 250px;
-}
-.medium.active{
-    left: -124px;
-    top: 250px;
-    margin: 0 3px;
-       background: orange !important;
-}
-.strong.active{
-    left: -32px;
-    width: 33%;
-    top: 250px;
-    background-color: #23ad5c !important;
-
-}.indicator{
-    display: none;
-}
-.indicator span{
-    align-items: left;
-    width: 26%;
-    height: 7px;
-    background-color: lightgrey;
-    border-radius: 5px;
-    
-
-
-}
-.indicator span:before{
-    content: '';
+#percen{
+    font-size: 22px;
     position: absolute;
-    top: 1px;
-    
+    top: 10px;
+}
+#myInput1{
+    padding: 0px;
+}
+#txt{
+    font-family: raleway;
+    font-weight: bold;
+    font-style: italic;
+    position: absolute;
+    transform: translateY(-10px);
     border-radius: 5px;
     
-
 }
-.txt{
-    display: none;
-}
-.txt.weak{
-    color: #ff4757;
-
-}
-
-.txt.medium{
-    color: orange;
-
+#txt1{
+    font-style: italic;
+    transform: translateY(-32px);
+    border-radius: 20px;
+    opacity: .7;
+    text-align: center;
+    width: 80%;
 }
 
-.txt.strong{
-    color: #23ad5c;
 
-}
+
+
+
+
+
