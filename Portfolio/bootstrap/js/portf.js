@@ -32,6 +32,7 @@ for(let i=0;i<totalFilterBtn;i++){
 }
 
 /* portfolio lightbox */
+
 	const lightbox = document.querySelector('.lightbox'),
 	lightboxImg = lightbox.querySelector('.lightbox-img'),
 	lightboxClose = lightbox.querySelector('.lightbox-close')
@@ -84,5 +85,67 @@ lightbox.addEventListener("click", function(event){
 	if(event.target === lightboxClose || event.target === lightbox)
 		toggleLightbox();
 })
+
+//Aside
+	const nav = document.querySelector(".nav"),
+		navList = document.querySelectorAll("li"),
+		allSection = document.querySelectorAll(".section"),
+		totalNavList = navList.length,
+		totalallSection = allSection.length;
+
+	for(let i = 0;i < totalNavList;i++){
+		const a = navList[i].querySelector("a");
+		//console.log(a);
+		//console.log(navList[i]);
+		a.addEventListener("click", function(){
+			//console.log(this);
+			
+
+			//remove back-section class
+
+			for(let i = 0;i < totalallSection;i++){
+				allSection[i].classList.remove("back-section");
+			}
+
+
+			for(let j = 0;j < totalNavList ;j++){
+				if( navList[j].querySelector("a").classList.contains("active")){
+					//add back-section class
+					allSection[j].classList.add("back-section");
+				}
+					
+				navList[j].querySelector("a").classList.remove("active");
+				
+
+			}
+			this.classList.add("active");
+			showSelection(this);
+		})
+
+	}
+
+	function showSelection(element){
+		for(let i = 0;i < totalallSection;i++){
+			allSection[i].classList.remove("active");
+		}
+		const target = element.getAttribute("href").split("#")[1];
+		console.log(target)
+
+		document.querySelector("#"+target).classList.add("active");
+
+	}
 		
+	//nav-toggler aside one slideing
+	const navTogglerBtn = document.querySelector(".nav-toggler"),
+		aside = document.querySelector(".aside");
+
+		navTogglerBtn.addEventListener("click", () => {
+		asideSectionTogBtn();
+
+	});
+
+	function asideSectionTogBtn(){
+		aside.classList.toggle("open");
+		navTogglerBtn.classList.toggle("open");
+	}
 
