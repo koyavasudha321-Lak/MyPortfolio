@@ -1,12 +1,30 @@
+
+
+window.addEventListener("load", function(){
+	document.querySelector(".preloader").classList.add("opacity-0");
+
+	setTimeout(() =>{
+		document.querySelector(".preloader").style.display="none"
+
+	}, 1000)
+})
+
+
+
+
+
 // portfolio item filter
 const filterContainer=document.querySelector('.portfolio-filter'), 
 	filterBtns=filterContainer.children,
 	totalFilterBtn=filterBtns.length,
 	portfolioItems=document.querySelectorAll('.portfolio-item'),//==>21 images
+
 	//portfolioItems=document.querySelector('.portfolio-items').children,
 	totalPortfolioItem = portfolioItems.length;
 	//console.log(totalPortfolioItem);//==>21 imaages
 	//console.log(totalFilterBtn) --> 4
+
+
 for(let i=0;i<totalFilterBtn;i++){
 	//console.log(filterBtns[i])
 	filterBtns[i].addEventListener('click', function(){
@@ -129,7 +147,7 @@ lightbox.addEventListener("click", function(event){
 			allSection[i].classList.remove("active");
 		}
 		const target = element.getAttribute("href").split("#")[1];
-		console.log(target)
+		//console.log(target)
 
 		document.querySelector("#"+target).classList.add("active");
 
@@ -140,12 +158,15 @@ lightbox.addEventListener("click", function(event){
 		aside = document.querySelector(".aside");
 
 		navTogglerBtn.addEventListener("click", () => {
-		asideSectionTogBtn();
+			asideSectionTogBtn();
 
 	});
 
 	function asideSectionTogBtn(){
 		aside.classList.toggle("open");
 		navTogglerBtn.classList.toggle("open");
+		for(let i = 0;i < totalallSection;i++){
+			allSection[i].classList.toggle("open");
+		}
 	}
 
