@@ -1,6 +1,8 @@
+//var passwo ;
 /* login*/
 function myFun(){
     var x = document.getElementById("myInput");
+    //let passwo = document.getElementById("myInput").value;
     var y = document.getElementById("hide01");
     
     var z = document.getElementById("hide02");
@@ -143,6 +145,30 @@ function login_form_validate(){
    
     
 }
+
+
+/*login*/
+
+function enter_login(){
+    var uEmail = document.getElementById('em_er').value;
+    let passwo = document.getElementById('myInput').value;
+    console.log(uEmail);
+    console.log(passwo)
+    var hey = (uEmail === "koyavasudha321@gmail.com") && (passwo === "Vasudha@123");
+    console.log(hey)
+    if(hey){
+        
+        window.open("file:///C:/Users/91966/OneDrive/Desktop/Portfolio/HTMLS/Port.html");
+    }else{
+        window.alert('Login Failed');
+    }
+
+
+
+
+}
+
+
 
 
 
