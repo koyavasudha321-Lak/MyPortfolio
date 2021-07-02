@@ -367,7 +367,9 @@ input, textarea, select{
     
    
 }
-
+body.dark .home .intro img{
+    border: 5px solid rgba(255,255,255,0.5);
+}
 .home .intro img{
     height: 200px;
     width: 200px;
@@ -690,6 +692,7 @@ body.dark .portfolio .portfolio-filter button.active,
         opacity: 1;
     }
 }
+
 .portfolio .portfolio-item-inner{
     border: 6px solid #fdf9ff;
     border-radius: 10px;

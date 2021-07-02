@@ -1,8 +1,5 @@
-.dropdown-item:hover{
-    background: linear-gradient(45deg,black,darkslategrey);
-    color:white !important;
-    box-shadow: 0 0 5px black;
-}
+@import url('https://fonts.googleapis.com/css?family=Rubik:500,700,700&display=swap');
+
 
 .btn-primary, .bg-primary{
 	background: linear-gradient(12deg, blue, grey, blue, grey);
@@ -21,13 +18,41 @@
 .btn-danger, .bg-danger{
 	background: linear-gradient(12deg, lightseagreen, crimson, lightseagreen);
 }
+#para1{
+	border: 2px solid lime;
+}
+#para2{
+	border: 2px solid green;
+}
+#my1, #my2, #my3{
+	border: 2px solid crimson;
+}
+#para3{
+	border: 2px solid pink;
+}
+body{
+	font-family: 'Rubik', sans-serif;
+}
+#myImg{
+	
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background: cover;
 
 
+}
+#myContent{
+	z-index: 1;
+	position: relative;
+	background-image: transparent;
+	background-repeat: cover;
+}
 
 
 
 .bg-teal, .btn-teal{
-    background-color: #2d7070 !important;
+    background: rgb(92,236,158);
     color: white;
 }
 

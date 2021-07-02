@@ -17,12 +17,12 @@
     <!-- social media-->
     
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<title>Dashboard</title>
+	<title>Projects</title>
 
 
 	
 </head>
-<body>
+<body >
 
 	
 
@@ -33,8 +33,9 @@
 		<div class="container">
 			<div class="row">
 				<h1 class="animated flipInY">
-					<i class="fa fa-chart-bar"></i>Dashboard
+					<i class="fa fa-code-fork"></i> Projects
 				</h1>
+				<button class="ml-auto btn-secondary"> <a href="port.html"><i class="fa fa-arrow-left"></i></a></button>
 			</div>
 		</div>
 	</section>
@@ -58,7 +59,7 @@
 					<div class="col-md-4">
 						<button class="btn btn-warning btn-block" data-toggle
 						="modal" data-target="#emp-modal">
-							<i class="fa fa-plus-circle">Add Employee</i> 
+							<i class="fa fa-plus-circle">Add Project</i> 
 						 </button>	
 					</div>
 			</div>
@@ -88,10 +89,10 @@
 							<label class="form-check-label">Category</label>
 							<select class="form-control">
 								<option value="">Select a Category</option>
-								<option value="">Maintainance</option>
-								<option value="">Development</option>
-								<option value="">Production Support</option>
-								<option value="">Client Meetings</option>
+								<option value="">Covid19-API</option>
+								<option value="">Portfolio</option>
+								<option value="">Tuition</option>
+								
 							</select>
 						</div>
 
@@ -156,7 +157,7 @@
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content animated flipInY">
 				<div class="modal-header bg-warning text-white">
-					<h3>Add Employee</h3>
+					<h3>Add Project</h3>
 
 					<button class="close" data-dismiss="modal">
 						<i class="fa fa-times-circle"></i>
@@ -166,17 +167,22 @@
 				<div class="modal-body bg-light">
 					<form>
 						<div class="form-group">
+							<label class="form-check-label">Project Name</label>
+							<input type="text" class="form-control" placeholder="Project">
+						</div>
+
+						<div class="form-group">
+							<label class="form-check-label">Description</label>
+
+							<textarea   rows="4" class="form-control" placeholder="Description"></textarea>
+						</div>
+
+						<div class="form-group">
+							<label class="form-check-label">Project Domain Name</label>
 							
-							<input type="text" class="form-control" placeholder="Employee Name">
+							<input type="text" class="form-control" placeholder=" Domain Name">
 						</div>
-
-						<div class="form-group">
-							<input  type="email" class="form-control" placeholder="Employee Email">
-						</div>
-
-						<div class="form-group">
-							<input  type="password" class="form-control" placeholder="Default Password">
-						</div>
+						
 							
 						<div>
 							<input type="submit" class="btn btn-warning" value="Add Task">
@@ -194,124 +200,38 @@
 			<div class="container">
 				<div class="row"> 
 					<div class="col-md-9">
-						<div class="card animated zoomIn delay-2s">
-							<div class="card-header bg-danger text-white">
-								<h3>Current Task</h3>
-								
-							</div>
-							<div class="card-body bg-light">
-								<table class="table table-hover text-center">
-									<thead class="bg-dark text-white">
-										<tr>
-											<th>Sno</th>
-											<th>Name</th>
-											<th>Email</th>
-											<th>Task</th>
-											<th>Level</th>
-											<th>Category</th>
-											<th>Details</th>
-										</tr>
-									</thead>
+						<div class="card animated zoomIn delay-2s " id="para21" style="background: rgb(218,242,254);">
+							<div class="card" style="width: 820px; padding-left: 20px;padding-top: 20px;padding-right: 20px;" id="my1">
+  <img class="card-img-top" src="../images/pro1.png" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Myportfolio</h5>
+    <p class="card-text">It Contains all details of my Academic and skill set ,my Projects Videos, My certificates Images.</p>
+    
+  </div>
+</div>
 
-									<tbody class="bg-light">
-										<tr>
-											<td>1</td>
-											<td>Vasudha</td>
-											<td>Vasu@gmail.com</td>
-											<td>Developer</td>
-											<td>Medium</td>
-											<td>Development</td>
-											<td>
-												<a href="#" class="btn btn-outline-dark btn-sm">Details</a>
-											</td>
-										</tr>
+<br>
 
-										<tr>
-											<td>2</td>
-											<td>Vasudha</td>
-											<td>Vasu@gmail.com</td>
-											<td>Developer</td>
-											<td>Medium</td>
-											<td>Development</td>
-											<td>
-												<a href="#" class="btn btn-outline-dark btn-sm">Details</a>
-											</td>
-										</tr>
+<div class="card" style="width: 820px;" id="my2">
+  <img class="card-img-top" src="../images/covid.png" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Covid19 Tracker</h5>
+    <p class="card-text">Displays Covid Cases for Searched Country and for Overall world.</p>
+    
+  </div>
+</div>
 
-										<tr>
-											<td>3</td>
-											<td>Vasudha</td>
-											<td>Vasu@gmail.com</td>
-											<td>Developer</td>
-											<td>Medium</td>
-											<td>Development</td>
-											<td>
-												<a href="#" class="btn btn-outline-dark btn-sm">Details</a>
-											</td>
-										</tr>
+<br>
 
-										<tr>
-											<td>4</td>
-											<td>Vasudha</td>
-											<td>Vasu@gmail.com</td>
-											<td>Developer</td>
-											<td>Medium</td>
-											<td>Development</td>
-											<td>
-												<a href="#" class="btn btn-outline-dark btn-sm">Details</a>
-											</td>
-										</tr>
+<div class="card" style="width: 820px;" id="my3">
+  <img class="card-img-top" src="../images/pro3.png" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Tuition</h5>
+    <p class="card-text">It's Just like a small tuition for benifiting admin.</p>
+  
+  </div>
+</div>
 
-										<tr>
-											<td>5</td>
-											<td>Vasudha</td>
-											<td>Vasu@gmail.com</td>
-											<td>Developer</td>
-											<td>Medium</td>
-											<td>Development</td>
-											<td>
-												<a href="#" class="btn btn-outline-dark btn-sm">Details</a>
-											</td>
-										</tr>
-
-										<tr>
-											<td>6</td>
-											<td>Vasudha</td>
-											<td>Vasu@gmail.com</td>
-											<td>Developer</td>
-											<td>Medium</td>
-											<td>Development</td>
-											<td>
-												<a href="#" class="btn btn-outline-dark btn-sm">Details</a>
-											</td>
-										</tr>
-
-										<tr>
-											<td>7</td>
-											<td>Vasudha</td>
-											<td>Vasu@gmail.com</td>
-											<td>Developer</td>
-											<td>Medium</td>
-											<td>Development</td>
-											<td>
-												<a href="#" class="btn btn-outline-dark btn-sm">Details</a>
-											</td>
-										</tr>
-
-										<tr>
-											<td>8</td>
-											<td>Vasudha</td>
-											<td>Vasu@gmail.com</td>
-											<td>Developer</td>
-											<td>Medium</td>
-											<td>Development</td>
-											<td>
-												<a href="#" class="btn btn-outline-dark btn-sm">Details</a>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
 						</div>
 					</div>
 					<div class="col-md-3 animated slideInUp delay-3s">
@@ -321,11 +241,11 @@
 							<div class="card-header bg-primary text-white">
 								<div class="row align-items-center">
 									<div class="col">
-										<div class="fa fa-list fa-4x"></div>
+										<div class="fa fa-user-o fa-4x"></div>
 									</div>
 									<div class="col">
-										<h3 class="display-3">11</h3>
-										<h6>Tasks</h6>
+										<h3 class="display-3">1</h3>
+										<h6>Portfolio</h6>
 									</div>
 								</div>
 							</div>
@@ -343,11 +263,11 @@
 							<div class="card-header bg-success text-white">
 								<div class="row align-items-center">
 									<div class="col">
-										<div class="fa fa-sitemap fa-4x"></div>
+										<div class="fas fa-virus fa-4x"></div>
 									</div>
 									<div class="col">
-										<h3 class="display-3">25</h3>
-										<h6>Categories</h6>
+										<h3 class="display-3">2</h3>
+										<h6>Covid19</h6>
 									</div>
 								</div>
 							</div>
@@ -364,11 +284,11 @@
 							<div class="card-header bg-warning text-white">
 								<div class="row align-items-center">
 									<div class="col">
-										<div class="fa fa-users fa-4x"></div>
+										<div class="fa fa-graduation-cap fa-4x"></div>
 									</div>
 									<div class="col">
-										<h3 class="display-3">55</h3>
-										<h6>Employees</h6>
+										<h3 class="display-3">3</h3>
+										<h6>Tuition</h6>
 									</div>
 								</div>
 							</div>
